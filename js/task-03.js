@@ -13,9 +13,8 @@ const images = [
   },
 ];
 
+
+
 const gallery = document.querySelector(".gallery");
-const image = images.map((q) => `<li class="item"><img src="${q.url}"></li>`).join("");
+const image = images.map((e) =>`<li class="item"><img src="${e.url}" width = '320' height = '200'></li>`).join("");
 gallery.insertAdjacentHTML("afterbegin", image)
-gallery.style.display = "flex";
-gallery.style.flexDirection = "row";
-gallery.style.listStyle = "none";

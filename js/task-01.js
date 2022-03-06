@@ -1,10 +1,14 @@
-const items = categories.querySelectorAll(".item");
-console.log("Number of categories: ", items.length);
-items.forEach(toThinkCategories);
-function toThinkCategories(item) {
-    const tittel = item.querySelector("h2");
-    const list = item.querySelector("ul");
-    const itemsEl = list.children;
-    console.log("Category:", tittel.textContent);
-    console.log("Elements: ", itemsEl.length);
-}
+const categories = document.querySelectorAll('h2');
+console.log(`number of categories: ${categories.length}`);
+
+
+
+const items = document.querySelectorAll('.item');
+// console.log(items);
+
+items.forEach( element => {
+    const title = element.querySelector('h2').textContent;
+    // console.log(title);
+    const itemsLength = element.querySelectorAll('li').length;
+    console.log(`Category: ${title} \nElements: ${itemsLength}`);
+}); 
