@@ -1,4 +1,5 @@
-const form = document.querySelector('.login-form');
+const form = document.querySelector('form');
+console.log(form)
 form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
@@ -6,7 +7,7 @@ function onFormSubmit(event) {
     const formElements = event.currentTarget.elements;
     const email = formElements.email.value;
     const password = formElements.password.value;
-    console.log(email, password);
+   
     const formData = {
         email,
         password,
@@ -18,3 +19,6 @@ function onFormSubmit(event) {
         alert('Все поля должны быть заполнены.');
     }
 };
+
+
+
